@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Wakil - Web Developer CV (Animated)</title>
+    <style>
+        /* General Styles for Cleanliness */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Profile Picture Style */
+        #profile-picture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            float: right;
+            margin-bottom: 20px;
+            border-radius: 50%; /* Make it round */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+            /* --- Animation for the Profile Picture (Fade In and Drop Down) --- */
+            animation: profileDrop 1s ease-out forwards;
+            opacity: 0; /* Start invisible */
+        }
+
+        /* Header Layout and Text */
+        header {
+            overflow: auto;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            color: #2c3e50;
+            /* --- Animation for the Name (Slide In from Left) --- */
+            animation: slideInLeft 0.8s ease-out 0.5s forwards;
+            transform: translateX(-100%); /* Start off-screen to the left */
+            opacity: 0; /* Start invisible */
+        }
+
+        h2 {
+            margin: 5px 0 0 0;
+            color: #3498db;
+            /* --- Animation for the Title (Slide In from Left, Delayed) --- */
+            animation: slideInLeft 0.8s ease-out 0.8s forwards;
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 20px 0;
+            /* --- Animation for Sections (Fade Up) --- */
+            animation: fadeInFromBottom 1s ease-out;
+            animation-fill-mode: both; /* Keep the end state of the animation */
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        /* Delaying the section animations */
+        #about-me {
+            animation-delay: 1.2s;
+        }
+
+        #contact-links {
+            animation-delay: 1.8s;
+        }
+
+        /* Horizontal Rule Style */
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(52, 152, 219, 0.75), rgba(0, 0, 0, 0));
+        }
+
+        /* Link Hover Effect (Non-animation but good UX) */
+        #contact-links a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #contact-links a:hover {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+
+        /* ================================================= */
+        /* KEYFRAME DEFINITIONS FOR ANIMATIONS */
+        /* ================================================= */
+
+        /* Animation for the Profile Picture: Fades in and moves slightly down */
+        @keyframes profileDrop {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for the Header Text: Slides in from the left */
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Animation for the Sections: Fades in and slides up */
+        @keyframes fadeInFromBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img
+            id="profile-picture"
+            src="https://cdn.prgloo.com/media/a19f6c5e09ed4a57a074373b704addb1.jpg?width=1320&height=1980"
+            alt="Professional headshot of Ahmed Wakil"
+        >
+        <h1>Ahmed Wakil</h1>
+        <h2>Web Developer & Data Analyser</h2>
+    </header>
+
+    <hr>
+
+    <section id="about-me">
+        <h3>About Me</h3>
+        <p>
+            I am a <strong>passionate web developer</strong> and a <strong>Business Management with Innovation and Technology</strong> student at the <strong>University of Salford</strong> in Manchester. I have a strong foundation in <strong>HTML, CSS, and JavaScript</strong>, alongside <strong>vast knowledge in data analysis and Python</strong>. I am currently focused on mastering front-end development and aim to become a <strong>Full Stack Developer</strong>.
+        </p>
+
+        <h4>Key Skills:</h4>
+        <ul>
+            <li><strong>Front-End:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Data/Back-End:</strong> Python, Data Analysis</li>
+            <li><strong>Education:</strong> Business Management with Innovation and Technology</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section id="contact-links">
+        <h3>Connect with Me</h3>
+        <div>
+            <a href="hello.html">Portfolio</a> |
+            <a href="https://www.instagram.com/qt1ps_wakil/" target="_blank" rel="noopener noreferrer">Instagram Profile</a> |
+            <a href="about.html">Contact Form</a>
+        </div>
+    </section>
+
+</body>
+</html>
